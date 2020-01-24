@@ -5,4 +5,8 @@
 # =============================================================================
 
 def no_space(x):
-    x.index(" ")
+    y = list(x)
+    spaces = [i for i, b in enumerate(x) if b == " "]
+    for i in reversed(spaces):
+        del y[i]
+    return "".join(y)
