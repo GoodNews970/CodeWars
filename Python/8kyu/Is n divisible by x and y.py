@@ -10,5 +10,8 @@
 def is_divisible(n, x, y):
     print(n % x)
 
+def main(n, x, y):
+    is_divisible(n, x, y)
 
 if __name__ == '__main__':
+    main()
