@@ -8,10 +8,4 @@
 # n = 12, x = 7, y = 5 => false because 12 is neither divisible by 7 nor 5
 
 def is_divisible(n, x, y):
-    print(n % x)
-
-def main(n, x, y):
-    is_divisible(n, x, y)
-
-if __name__ == '__main__':
-    main()
+        return not n % x and not n % y
