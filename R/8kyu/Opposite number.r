@@ -9,5 +9,5 @@
 # -34: 34
 
 opposite <- function(number){
-  # your code here
+  -number
 }
