@@ -1,1 +1,1 @@
-My solutions to the coding challenges from CodeWars.
+My solutions to the coding challenges on CodeWars.
