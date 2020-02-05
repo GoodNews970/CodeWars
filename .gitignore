@@ -192,5 +192,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Visual Code settings
+.vscode
+
 # End of https://www.gitignore.io/api/r,linux,python,windows
 /bin/
