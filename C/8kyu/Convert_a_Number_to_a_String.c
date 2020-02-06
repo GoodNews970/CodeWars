@@ -9,6 +9,7 @@ number_to_string(123) // "123"
 number_to_string(999) // "999" */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 const char* number_to_string(int number) {
 
