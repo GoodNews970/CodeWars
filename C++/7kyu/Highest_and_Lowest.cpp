@@ -22,24 +22,29 @@ using std::string;
 string highAndLow(string numbers)
 {
     std::cout << numbers << "\n";
-    char copy[10000];
+    char copy[numbers.length()];
     size_t length = numbers.copy(copy, numbers.length(), 0);
     char *token = strtok(copy, " ");
-    int max = -1000, min = 1000;
+    int max = -10000, min = 10000;
     while (token != NULL)
     {
+        std::cout << "Current token: " << token << "\n";
         if (atoi(token) > max)
         {
+            std::cout << "Previous max: " << max << "\n";
             max = atoi(token);
+            std::cout << "New max: " << max << "\n";
         }
         if (atoi(token) < min)
         {
+            std::cout << "Previous min: " << min << "\n";
             min = atoi(token);
+            std::cout << "New min: " << min << "\n";
         }
         token = strtok(NULL, " ");
     }
     std::string result = std::to_string(max) + " " + std::to_string(min);
-    return(result);
+    return (result);
 }
 
 int main()
