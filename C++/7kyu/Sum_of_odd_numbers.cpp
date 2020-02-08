@@ -18,17 +18,22 @@ rowSumOddNumbers(2); // 3 + 5 = 8 */
 
 long long rowSumOddNumbers(unsigned n)
 {
+    int n_odd = 0;
+    for (size_t i = 0; i < n; i++)
+    {
+        n_odd += n - i;
+    }
     std::vector<int> vect;
-    for (int i = 1; i <= n; i++)
+    int i = 0;
+    while (vect.size() < n_odd)
     {
         if (i % 2 == 1)
         {
             vect.push_back(i);
         }
+        i++;
     }
-    vect.erase(vect.begin(), vect.end()-n);
+    vect.erase(vect.begin(), vect.end() - n);
     long long sum = std::accumulate(vect.begin(), vect.end(), 0);
-    return(sum);
+    return (sum);
 }
-
-// THIS IS INCOMPLETE (times out)
