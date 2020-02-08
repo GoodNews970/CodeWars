@@ -9,13 +9,26 @@ min({-52, 56, 30, 29, -54, 0, -110}) returns -110
 max({5}) returns 5
 min({42, 54, 65, 87, 0}) returns 0 */
 
-public class Kata {
+public class Find_Maximum_and_Minimum_Values_of_a_List {
 
-    public int min(int[] list) {
-      return 0;
+    public static int min(final int[] list) {
+      int mn = 10000;
+      for (int i = 0; i < list.length; i++) {
+        if (list[i] < mn) {
+          mn = list[i];
+        }
+      }
+      return mn;
     }
     
-    public int max(int[] list) {
-      return 0;
+    public static int max(final int[] list) {
+      int mx = -10000;
+      for (int i = 0; i < list.length; i++) {
+        if (list[i] > mx) {
+          mx = list[i];
+        }
+      }
+      return mx;
     }
-  }
+    
+}
