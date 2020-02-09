@@ -195,5 +195,9 @@ $RECYCLE.BIN/
 # Visual Code settings
 .vscode
 
+# Java settings
+.classpath
+.settings
+
 # End of https://www.gitignore.io/api/r,linux,python,windows
 /bin/
