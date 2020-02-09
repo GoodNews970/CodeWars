@@ -9,6 +9,8 @@ min({-52, 56, 30, 29, -54, 0, -110}) returns -110
 max({5}) returns 5
 min({42, 54, 65, 87, 0}) returns 0 */
 
+package _8kyu;
+
 public class Find_Maximum_and_Minimum_Values_of_a_List {
 
     public static int min(final int[] list) {

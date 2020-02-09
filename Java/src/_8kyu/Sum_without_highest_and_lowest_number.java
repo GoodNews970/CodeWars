@@ -17,6 +17,8 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
 
 I have created other katas. Have a look if you like coding and challenges. */
 
+package _8kyu;
+
 public class Sum_without_highest_and_lowest_number {
 
   public static int sum(int[] numbers) {

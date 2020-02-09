@@ -9,6 +9,8 @@ dish to the feast.
 Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these
 will not appear at the beginning or end of the string. They will not contain numerals. */
 
+package _8kyu;
+
 public class The_Feast_of_Many_Beasts {
 
     public static boolean feast(String beast, String dish) {
