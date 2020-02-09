@@ -198,6 +198,7 @@ $RECYCLE.BIN/
 # Java settings
 .classpath
 .settings
+Java/bin/
 
 # End of https://www.gitignore.io/api/r,linux,python,windows
 /bin/
