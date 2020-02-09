@@ -14,17 +14,15 @@ Note: for this kata y isn't considered a vowel. */
 package _7kyu;
 
 public class Disemvowel_Trolls {
+
     public static String disemvowel(String str) {
         String result = "";
         for (int i = 0; i < str.length(); i++) {
-            if ("aeiouAEIOU".indexOf(str.charAt(i)) > -1) {
-                result.concat(Character.toString(str.charAt(i)));                
+            if ("aeiouAEIOU".indexOf(str.charAt(i)) == -1) {
+                result = result.concat(Character.toString(str.charAt(i)));
             }
         }
         return result;
     }
 
-    public static void main(String[] args) {
-        disemvowel("strieo");  
-    }
 }
