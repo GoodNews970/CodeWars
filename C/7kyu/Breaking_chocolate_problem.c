@@ -10,6 +10,7 @@ If input data is invalid you should return 0 (as in no breaks are needed if we d
 always be a non-negative integer. */
 
 #include <stdint.h>
+
 uint32_t breaking_chocolate(uint32_t n, uint32_t m) {
     return (n*m > 0) ? (n*m)-1 : 0;
 }
