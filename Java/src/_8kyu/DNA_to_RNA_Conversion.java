@@ -19,15 +19,7 @@ package _8kyu;
 public class DNA_to_RNA_Conversion {
 
     public String dnaToRna(String dna) {
-        StringBuilder bldr = new StringBuilder(dna);
-        for (int i = 0; i < dna.length(); i++) {
-            if (dna.charAt(i) != 'T') {
-                continue;
-            } else {
-                bldr.setCharAt(i, 'U');
-            }
-        }
-        return bldr.toString();
-    } 
-
+        return dna.replace('T', 'U');
+    }
+    
 }
