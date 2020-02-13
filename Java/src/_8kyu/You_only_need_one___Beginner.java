@@ -8,17 +8,12 @@ Return true if the array contains the value, false if not. */
 
 package _8kyu;
 
+import java.util.Arrays;
+
 public class You_only_need_one___Beginner {
 
     public static boolean check(Object[] a, Object x) {
-        boolean ret = false;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == x) {
-                ret = true;
-                break;
-            }
-        }
-        return ret;
+        return Arrays.asList(a).contains(x);
     }
 
 }
