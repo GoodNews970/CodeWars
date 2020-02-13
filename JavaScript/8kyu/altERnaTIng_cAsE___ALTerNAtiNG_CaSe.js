@@ -12,12 +12,5 @@ Define String.prototype.toAlternatingCase (or a similar function/method such as 
 As usual, your function/method should be pure, i.e. it should not mutate the original string. */
 
 String.prototype.toAlternatingCase = function () {
-    var ret = [];
-    for (let index = 0; index < this.length; index++) {
-        ret[index] = (this.charAt(index) == this.charAt(index).toLowerCase())
-            ? this.charAt(index).toUpperCase() : this.charAt(index).toLowerCase();
-    }
-    return ret.join('');
+    return this.split("").map(i => i === i.toLowerCase() ? i.toUpperCase() : i.toLowerCase()).join('');
 }
-
-console.log("Hello World".toAlternatingCase());
