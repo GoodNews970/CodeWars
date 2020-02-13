@@ -12,14 +12,14 @@ Examples
 
 char *reverseWords(const char *text)
 {
-    char *result = malloc(strlen(text) + 1);
-    char *temp = malloc(strlen(text) + 1);
-    char *tok = malloc(strlen(text) + 1);
+    char *result = malloc(strlen(text)*sizeof(char)+1);
+    char *temp = malloc(strlen(text)*sizeof(char)+1);
+    char *tok = malloc(strlen(text)*sizeof(char)+1);
     strcpy(temp, text);
     tok = strtok(temp, " ");
     size_t i = strlen(tok);
     size_t j = 0;
-    if (text[j] == ' ')
+    while (text[j] == ' ')
     {
         result[j] = ' ';
         j++;
@@ -32,9 +32,7 @@ char *reverseWords(const char *text)
     }
     while (tok = strtok(NULL, " "))
     {
-        result[j] = ' ';
-        j++;
-        if (text[j] == ' ')
+        while (text[j] == ' ')
         {
             result[j] = ' ';
             j++;
@@ -47,17 +45,22 @@ char *reverseWords(const char *text)
             j++;
         }
     }
+    while (text[j] == ' ')
+    {
+        result[j] = ' ';
+        j++;
+    }
+    result[j] = '\0';
     return result;
 }
 
 int main(void)
 {
-    const char* test_str = "The quick brown fox jumps over the lazy dog.";
-    const char* expected = "ehT kciuq nworb xof spmuj revo eht yzal .god";
-    char* submitted = reverseWords(test_str);
+    const char *test_str = "The quick brown fox jumps over the lazy dog..";
+    const char *expected = "ehT kciuq nworb xof spmuj revo eht yzal ..god";
+    char *submitted = reverseWords(test_str);
     printf("The test string is       %s\nThe expected string is   %s\nThe actual string is     %s\n", test_str, expected, submitted);
 }
-
 
 /*
 This passes all of the sample tests except for the last:    "The quick brown fox jumps over the lazy dog."
