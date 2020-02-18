@@ -20,7 +20,7 @@ ArithmeticFunction.arithmetic(5, 2, "divide")   => returns 2 */
 
 package _7kyu;
 
-class Make_a_function_that_does_arithmetic {
+public class Make_a_function_that_does_arithmetic {
 
     public static int arithmetic(int a, int b, String operator) {
         return (operator == "add") ? a + b :

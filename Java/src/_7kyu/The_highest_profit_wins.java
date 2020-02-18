@@ -20,7 +20,7 @@ function will always get an array or a list, you don't have to check for null, u
 
 package _7kyu;
 
-class The_highest_profit_wins {
+public class The_highest_profit_wins {
 
     public static int[] minMax(int[] arr) {
         int min=Integer.MAX_VALUE, max=Integer.MIN_VALUE;

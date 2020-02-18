@@ -20,7 +20,7 @@ output: number as a string
 
 package _7kyu;
 
-class Maximum_Length_Difference {
+public class Maximum_Length_Difference {
 
     public static int mxdiflg(String[] a1, String[] a2) {
         if (a1.length == 0 || a2.length == 0) {
