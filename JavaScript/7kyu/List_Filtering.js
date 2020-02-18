@@ -9,11 +9,5 @@ filter_list([1,'a','b',0,15]) == [1,0,15]
 filter_list([1,2,'aasf','1','123',123]) == [1,2,123] */
 
 function filter_list(l) {
-    var ret = [];
-    l.forEach(element => {
-        if (typeof element != "string") {
-            ret.push(element);            
-        } 
-    });
-    return ret;
-  }
+    return l.filter(function (i) { return typeof i == "number" })
+}
