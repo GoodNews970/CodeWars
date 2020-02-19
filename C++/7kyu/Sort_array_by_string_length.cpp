@@ -28,15 +28,8 @@ class Kata
 public:
     vector<string> sortByLength(vector<string> array)
     {
-        struct compare
-        {
-            bool operator()(const std::string &first, const std::string &second)
-            {
-                return first.size() < second.size();
-            }
-        };
-        compare c;
-        sort(array.begin(), array.end(), c);
+        sort(array.begin(), array.end(),
+            [](string s1, string s2){return s1.size() < s2.size();});
         return array;
     }
 };
