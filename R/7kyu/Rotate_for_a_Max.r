@@ -11,9 +11,8 @@
 # Keep the first three digits and rotate left the rest: 68597. Now it is over
 # since keeping the first four it remains only onedigit which rotated is itself.
 
-# You have the following sequence of numbers:
-
-# 56789 -> 67895 -> 68957 -> 68579 -> 68597
+# You have the following sequence of
+# numbers: 56789, 67895 -> 68957 -> 68579 -> 68597
 
 # and you must return the greatest: 68957.
 
@@ -27,12 +26,12 @@
 
 # max_rot(38458215) should return 85821534
 
-maxRot <- function(n) {
+max_Rot <- function(n) {
   mx <- n
   tmp <- n
   if (nchar(n) > 1) {
     i <- 1
-    while (i < nchar(tmp)){
+    while (i < nchar(tmp)) {
       print(tmp)
       tmp <- unlist(strsplit(as.character(tmp), ""))
       tmp <- as.numeric(paste0(append(tmp[-i], tmp[i]), collapse = ""))
@@ -46,5 +45,3 @@ maxRot <- function(n) {
     return(mx)
   }
 }
-
-maxRot(30051484632)
