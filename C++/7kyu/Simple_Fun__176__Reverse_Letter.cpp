@@ -24,8 +24,7 @@ std::string reverse_letter(const std::string &str)
     string ret = "";
     for (int i = str.length() - 1; i >= 0; --i)
     {
-        if ((str[i] >= 'A' && str[i] <= 'Z') ||
-            (str[i] >= 'a' && str[i] <= 'z'))
+        if (isalpha(str[i]))
         {
             ret += str[i];
         }
