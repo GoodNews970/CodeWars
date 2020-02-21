@@ -23,20 +23,12 @@ so palindrome_chain_length(87) == 4 */
 
 var palindromeChainLength = function (n) {
     var tmp = n.toString().split('')
-    var notpalindrome = true
-    var steps = 0
-    while (notpalindrome) {
-        for (let i = 0, j = tmp.length - 1; i < tmp.length; i++ , j--) {
-            if (tmp[i] != tmp[j]) {
-                tmp = parseInt(tmp.join('')) + parseInt(tmp.reverse().join(''))
-                tmp = tmp.toString().split('')
-                steps += 1
-                break
-            }
-            if (j == 0) {
-                notpalindrome = false                
-            }
+    for (let i = 0, j = tmp.length - 1; i < tmp.length; i++ , j--) {
+        if (tmp[i] != tmp[j]) {
+            return 1 + palindromeChainLength(n+parseInt(tmp.reverse().join('')))
         }
     }
-    return steps
+    return 0
 };
+
+console.log(palindromeChainLength(87))
