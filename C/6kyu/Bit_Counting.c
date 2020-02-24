@@ -12,11 +12,10 @@ should return 5 in this case */
 size_t countBits(unsigned value)
 {
     size_t ret = 0;
-    ret += value % 2;
-    while (value > 1)
+    while (value)
     {
-        value /= 2;
-        ret += value % 2;
+        ret += value & 1;
+        value >>= 1;
     }
     return ret;
 }
