@@ -19,25 +19,13 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
 
 I have also created other katas. Take a look if you enjoyed this kata! */
 
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-
 char findMissingLetter(char array[], int arrayLength)
 {
-    char *al = "abcdefghijklmnopqrstuvwxyz", *p1, *p2;
-    int gap;
-    for (size_t i = 1; i < arrayLength; i++)
+    for (int i = 0; i < arrayLength - 1; i++)
     {
-        p1 = strchr(al, tolower(array[i - 1]));
-        p2 = strchr(al, tolower(array[i]));
-        gap = p2 - p1;
-        if (gap > 1)
+        if (array[i] + 1 != array[i + 1])
         {
-            break;
+            return array[i] + 1;
         }
     }
-    return (array[0] == tolower(array[0]))
-               ? *p1 + gap - 1
-               : toupper(*p1 + gap - 1);
 }
