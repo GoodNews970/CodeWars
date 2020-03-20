@@ -200,5 +200,8 @@ $RECYCLE.BIN/
 .settings
 Java/bin/
 
+# VSCode settings
+*.code-workspace
+
 # End of https://www.gitignore.io/api/r,linux,python,windows
 /bin/
